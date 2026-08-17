@@ -406,7 +406,10 @@ jobs:
           variant_input="${{ inputs.ksu_variant }}"
 
           case "$variant_input" in
-            "Official"|"ReSukiSU")
+            "Official")
+              BRANCH="-s b6e50f9a"
+              ;;
+            "ReSukiSU")
               BRANCH="-s main"
               ;;
             "SukiSU")
